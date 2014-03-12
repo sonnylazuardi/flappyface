@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'flappy';
+  src: url('../fonts/flappy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: 'flappy';
+    background: url(../img/static_tbg.png) repeat-x #82e38c;
+    color: #fff;
+    /*text-shadow: 2px 2px 2px rgba(0,0,0,.5);*/
+}
+
+.no-bg {
+    background: none;
+}
+
+.invert {
+    color: #666;
+    font-weight: normal;
+}
+.push-right {
+    text-align: center;
+}

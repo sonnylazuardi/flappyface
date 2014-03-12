@@ -1,14 +1,34 @@
-var express = require("express");
-var logfmt = require("logfmt");
+var express = require('express'),
+    mongoose = require('mongoose'),
+    Sync = require('sync'),
+    path = require('path'),
+    request = require('request');
+
+// var proxy = request.defaults({'proxy':'http://amal.syahreza:kmzwa8awaa@cache.itb.ac.id:8080/'});
+    
+// mongoose.connect('mongodb://localhost/flappyface');
+
+// var userSchema = mongoose.Schema({
+//     fbid: String,
+//     name: String, 
+//     highscore: Number
+// });
+// var User = mongoose.model('User', userSchema);
+
+
+// Setup the Express.js server
 var app = express();
+app.use(express.logger());
+app.use(express.bodyParser());
+app.use(express.cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.session({
+        secret: "flappyface"
+}));
 
-app.use(logfmt.requestLogger());
+// app.get('/', function(req, res){
+//     res.send('Hello World');
+// });
 
-app.get('/', function(req, res) {
-  res.send('Hello World!');
-});
-
-var port = Number(process.env.PORT || 80);
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+app.listen(3000);
+console.log("listening on http://localhost:3000/");
