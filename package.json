@@ -15,7 +15,8 @@
     "express": "3.4.1",
     "logfmt": "*",
     "mongoose": "*",
-    "sync": "*"
+    "sync": "*",
+    "path": "*"
   },
   "author": "sonnylazuardi",
   "license": "MIT"
