@@ -1,6 +1,4 @@
 var express = require('express'),
-    mongoose = require('mongoose'),
-    Sync = require('sync'),
     path = require('path');
     
 // mongoose.connect('mongodb://localhost/flappyface');

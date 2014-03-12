@@ -12,11 +12,7 @@
     "facebook"
   ],
   "dependencies": {
-    "express": "3.4.1",
-    "logfmt": "*",
-    "mongoose": "*",
-    "sync": "*",
-    "path": "*"
+    "express": "3.4.1"
   },
   "author": "sonnylazuardi",
   "license": "MIT"
