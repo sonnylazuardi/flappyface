@@ -11,6 +11,10 @@
     "face",
     "facebook"
   ],
+  "dependencies": {
+    "express": "3.4.1",
+    "logfmt": "*"
+  },
   "author": "sonnylazuardi",
   "license": "MIT"
 }
