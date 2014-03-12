@@ -1,10 +1,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     Sync = require('sync'),
-    path = require('path'),
-    request = require('request');
-
-// var proxy = request.defaults({'proxy':'http://amal.syahreza:kmzwa8awaa@cache.itb.ac.id:8080/'});
+    path = require('path');
     
 // mongoose.connect('mongodb://localhost/flappyface');
 
