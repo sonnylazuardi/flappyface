@@ -12,13 +12,6 @@ var express = require('express');
 
 // Setup the Express.js server
 var app = express();
-app.use(express.logger());
-app.use(express.bodyParser());
-app.use(express.cookieParser());
-app.use(express.static(__dirname+'/public'));
-app.use(express.session({
-        secret: "flappyface"
-}));
 
 app.get('/', function(req, res){
     res.send('Hello World');
