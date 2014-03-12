@@ -1,0 +1,16 @@
+{
+  "name": "flappyface",
+  "version": "0.1.0",
+  "description": "first experiment on heroku",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flappy",
+    "face",
+    "facebook"
+  ],
+  "author": "sonnylazuardi",
+  "license": "MIT"
+}
