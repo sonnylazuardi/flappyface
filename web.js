@@ -1,5 +1,4 @@
-var express = require('express'),
-    path = require('path');
+var express = require('express');
     
 // mongoose.connect('mongodb://localhost/flappyface');
 
@@ -16,14 +15,14 @@ var app = express();
 app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname+'/public'));
 app.use(express.session({
         secret: "flappyface"
 }));
 
-// app.get('/', function(req, res){
-//     res.send('Hello World');
-// });
+app.get('/', function(req, res){
+    res.send('Hello World');
+});
 
 app.listen(80);
 console.log("listening on http://localhost:80/");
