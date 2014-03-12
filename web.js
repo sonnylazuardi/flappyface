@@ -1,21 +1,14 @@
-var express = require('express');
-    
-// mongoose.connect('mongodb://localhost/flappyface');
-
-// var userSchema = mongoose.Schema({
-//     fbid: String,
-//     name: String, 
-//     highscore: Number
-// });
-// var User = mongoose.model('User', userSchema);
-
-
-// Setup the Express.js server
+var express = require("express");
+var logfmt = require("logfmt");
 var app = express();
 
-app.get('/', function(req, res){
-    res.send('Hello World');
+app.use(logfmt.requestLogger());
+
+app.get('/', function(req, res) {
+  res.send('Hello World!');
 });
 
-app.listen(80);
-console.log("listening on http://localhost:80/");
+var port = Number(process.env.PORT || 80);
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
